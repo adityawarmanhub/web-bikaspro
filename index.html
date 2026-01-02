@@ -82,9 +82,8 @@
         
         <!-- ================= HOME PAGE ================= -->
         <div id="home-page" class="page-section fade-in">
-            <!-- Hero Section -->
+            <!-- 1. Hero Section -->
             <header class="relative bg-slate-900 text-white min-h-[85vh] flex items-center overflow-hidden py-12">
-                <!-- Background Decoration -->
                 <div class="absolute top-0 right-0 w-2/3 h-full bg-slate-800/40 -skew-x-12 translate-x-1/4 pointer-events-none"></div>
                 <div class="absolute bottom-0 left-0 w-96 h-96 bg-amber-500/10 blur-3xl rounded-full pointer-events-none"></div>
 
@@ -109,19 +108,15 @@
                         </div>
                     </div>
                     
-                    <!-- Hero Image Area (Placeholder Logic) -->
+                    <!-- Hero Image (Responsive Height) -->
                     <div class="relative hidden md:block group">
-                        <div class="relative z-10 rounded-2xl overflow-hidden shadow-2xl border-4 border-slate-700/50 h-[450px] bg-slate-800 flex items-center justify-center">
-                             <!-- Image Fallback: Tries to load hero_banner.jpg -->
+                        <div class="relative z-10 rounded-2xl overflow-hidden shadow-2xl border-4 border-slate-700/50 h-[300px] md:h-[450px] bg-slate-800 flex items-center justify-center">
                              <img src="./images/hero_banner.jpg" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                             
-                             <!-- Fallback Icon if image missing -->
                              <div class="hidden flex-col items-center text-slate-600 absolute inset-0 justify-center bg-slate-800">
                                 <i data-lucide="image" class="w-20 h-20 mb-3 opacity-30"></i>
-                                <span class="text-xs uppercase tracking-widest opacity-50 font-bold">Banner Image Area</span>
+                                <span class="text-xs uppercase tracking-widest opacity-50 font-bold">Banner Image</span>
                              </div>
                              
-                             <!-- Floating Badge -->
                              <div class="absolute bottom-6 left-6 bg-white/10 backdrop-blur-md border border-white/10 p-4 rounded-xl shadow-lg flex items-center gap-3">
                                 <div class="w-10 h-10 rounded-full bg-amber-500 flex items-center justify-center text-slate-900">
                                     <i data-lucide="award" class="w-5 h-5"></i>
@@ -137,18 +132,54 @@
                 </div>
             </header>
 
-            <!-- Trusted Stats -->
+            <!-- 2. Trusted Stats -->
             <section class="bg-white py-10 border-b border-slate-100">
                 <div class="container mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-slate-100">
                     <div><div class="text-3xl font-bold text-slate-900 mb-1">50+</div><div class="text-slate-500 text-sm font-medium">Klien Korporat</div></div>
                     <div><div class="text-3xl font-bold text-slate-900 mb-1">100+</div><div class="text-slate-500 text-sm font-medium">Project Selesai</div></div>
                     <div><div class="text-3xl font-bold text-slate-900 mb-1">500+</div><div class="text-slate-500 text-sm font-medium">SKU Produk</div></div>
-                    <div><div class="text-3xl font-bold text-slate-900 mb-1">98%</div><div class="text-slate-500 text-sm font-medium">Kepuasan Klien</div></div>
+                    <div><div class="text-3xl font-bold text-slate-900 mb-1">5+</div><div class="text-slate-500 text-sm font-medium">Kota Besar</div></div>
                 </div>
             </section>
 
-            <!-- Packages -->
+            <!-- 3. Why Us -->
             <section class="py-20 bg-slate-50">
+                <div class="container mx-auto px-6">
+                    <div class="text-center max-w-2xl mx-auto mb-16">
+                        <h2 class="text-3xl font-bold text-slate-900 mb-4">Kenapa Memilih <span class="text-amber-600">BIKASPRO?</span></h2>
+                        <p class="text-slate-600">
+                            Kami paham tantangan Procurement & HR. Kami hadir untuk mempermudah proses pengadaan merchandise dan cetak korporat Anda.
+                        </p>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-slate-100">
+                            <div class="mb-6 bg-slate-50 w-16 h-16 rounded-full flex items-center justify-center">
+                                <i data-lucide="briefcase" class="w-8 h-8 text-blue-600"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-3">Kurasi Profesional</h3>
+                            <p class="text-slate-600 leading-relaxed">Kami tidak menjual barang murahan. Semua produk dikurasi agar layak merepresentasikan brand Anda.</p>
+                        </div>
+                        <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-slate-100">
+                            <div class="mb-6 bg-slate-50 w-16 h-16 rounded-full flex items-center justify-center">
+                                <i data-lucide="printer" class="w-8 h-8 text-green-600"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-3">Production Quality</h3>
+                            <p class="text-slate-600 leading-relaxed">Sistem QC berlapis untuk hasil cetak presisi. Warna akurat, potongan rapi, dan material sesuai spesifikasi.</p>
+                        </div>
+                        <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-slate-100">
+                            <div class="mb-6 bg-slate-50 w-16 h-16 rounded-full flex items-center justify-center">
+                                <i data-lucide="box" class="w-8 h-8 text-amber-600"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-3">Solusi All-in-One</h3>
+                            <p class="text-slate-600 leading-relaxed">Dari desain, produksi merchandise, advertising, booth hingga packaging. Anda terima beres.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. Packages -->
+            <section class="py-20 bg-white">
                 <div class="container mx-auto px-6">
                     <div class="flex flex-col md:flex-row justify-between items-end mb-12">
                         <div>
@@ -156,13 +187,26 @@
                             <p class="text-slate-600">Paling sering dipesan oleh perusahaan.</p>
                         </div>
                         <button onclick="switchPage('catalog')" class="text-amber-600 font-bold flex items-center gap-2 hover:gap-3 transition-all mt-4 md:mt-0">
-                            Lihat Semua <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            Lihat Semua Produk <i data-lucide="arrow-right" class="w-4 h-4"></i>
                         </button>
                     </div>
-                    <!-- Grid Container -->
                     <div id="packages-grid" class="grid md:grid-cols-3 gap-8">
                         <!-- JS Will Populate This -->
                     </div>
+                </div>
+            </section>
+
+            <!-- 5. CTA Banner -->
+            <section class="bg-slate-900 py-20">
+                <div class="container mx-auto px-6 text-center">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Butuh Konsultasi Gratis?</h2>
+                    <p class="text-slate-300 max-w-2xl mx-auto mb-10 text-lg">
+                        Jangan ragu untuk diskusi budget dan deadline. Tim kami siap membantu memberikan solusi terbaik untuk event Anda.
+                    </p>
+                    <a href="https://wa.me/6281234567890" target="_blank" class="inline-flex items-center gap-3 bg-amber-500 hover:bg-amber-600 text-slate-900 px-8 py-4 rounded-full font-bold text-lg transition-transform hover:scale-105">
+                        <i data-lucide="phone" class="w-5 h-5"></i>
+                        Hubungi WhatsApp Sekarang
+                    </a>
                 </div>
             </section>
         </div>
@@ -176,13 +220,10 @@
                         Jelajahi pilihan produk merchandise dan solusi cetak berkualitas kami. Semua item dapat di-custom dengan logo perusahaan Anda.
                     </p>
                 </div>
-
-                <!-- Filter Navigation -->
                 <div class="flex flex-wrap justify-center gap-2 mb-12 sticky top-24 z-30 bg-slate-50/90 backdrop-blur py-2" id="category-filters">
                     <!-- JS Will Populate This -->
                 </div>
-
-                <!-- Product Grid -->
+                <!-- Catalog Grid -->
                 <div id="catalog-grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                     <!-- JS Will Populate This -->
                 </div>
@@ -197,40 +238,66 @@
                     <p class="text-xl text-slate-600 leading-relaxed">Mitra Strategis Branding & Merchandise Korporat Anda.</p>
                 </div>
                 
-                <div class="bg-slate-100 rounded-2xl h-80 flex items-center justify-center mb-12 shadow-inner overflow-hidden relative group">
-                     <!-- Image Fallback: Tries to load about_us.jpg -->
+                <div class="bg-slate-100 rounded-2xl h-[300px] md:h-[400px] flex items-center justify-center mb-12 shadow-inner overflow-hidden relative group">
                      <img src="./images/about_production_warehouse.jpg" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                     
                      <div class="hidden flex-col items-center justify-center text-slate-400 absolute inset-0 bg-slate-100">
                         <i data-lucide="building-2" class="w-16 h-16 mx-auto mb-2 opacity-50"></i>
                         <span class="text-sm uppercase tracking-widest font-bold">Office / Production Warehouse</span>
                      </div>
                 </div>
 
-                <div class="prose prose-lg max-w-none text-slate-700 space-y-6">
-                    <p class="lead text-lg font-medium text-slate-900">
-                        BIKASPRO (BintangKasa Produksi) lahir dari satu pemahaman sederhana: Dalam dunia bisnis, merchandise bukan sekadar barang—itu adalah representasi citra perusahaan Anda.
-                    </p>
-                    <p>
-                        Kami memahami tantangan yang dihadapi tim Procurement dan HR: deadline yang ketat, vendor yang sulit dihubungi, dan kualitas barang yang tidak konsisten. BIKASPRO hadir untuk memutus rantai masalah tersebut dengan sistem produksi yang terintegrasi.
-                    </p>
+                <div class="prose prose-lg max-w-none text-slate-700 space-y-8">
+                    <section>
+                        <h2 class="text-2xl font-bold text-slate-900 mb-4">Cerita Kami</h2>
+                        <p>
+                            BIKASPRO (BintangKasa Produksi) lahir dari satu pemahaman sederhana: Dalam dunia bisnis, merchandise bukan sekadar barang—itu adalah representasi citra perusahaan Anda.
+                        </p>
+                        <p>
+                            Kami memahami tantangan yang dihadapi tim Procurement dan HR: deadline yang ketat, vendor yang sulit dihubungi, dan kualitas barang yang tidak konsisten. BIKASPRO hadir untuk memutus rantai masalah tersebut.
+                        </p>
+                        <p>
+                            Kami bukan sekadar vendor pencetak logo. Kami adalah konsultan produksi yang membantu Anda menavigasi ribuan opsi produk untuk menemukan solusi yang paling tepat sasaran, tepat budget, dan tepat waktu.
+                        </p>
+                    </section>
                     
-                    <div class="grid md:grid-cols-2 gap-6 my-10">
-                        <div class="bg-slate-50 p-6 rounded-xl border border-slate-100">
-                            <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mb-4">
-                                <i data-lucide="shield-check" class="w-5 h-5"></i>
+                    <section class="bg-slate-50 p-8 rounded-2xl border border-slate-100 my-12">
+                        <h2 class="text-2xl font-bold text-slate-900 mb-6">Mengapa Memilih Kami?</h2>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="flex gap-4">
+                                <div class="w-2 h-2 mt-2 rounded-full bg-amber-500 shrink-0"></div>
+                                <div>
+                                    <strong class="block text-slate-900 mb-1">Curated Selection</strong>
+                                    <span class="text-sm">Kami menyeleksi material terbaik agar souvenir Anda layak disimpan.</span>
+                                </div>
                             </div>
-                            <h3 class="font-bold text-slate-900 mb-2">Quality Control</h3>
-                            <p class="text-sm text-slate-600">Pengecekan berlapis untuk memastikan tidak ada logo miring atau barang cacat.</p>
-                        </div>
-                        <div class="bg-slate-50 p-6 rounded-xl border border-slate-100">
-                            <div class="w-10 h-10 bg-green-100 text-green-600 rounded-full flex items-center justify-center mb-4">
-                                <i data-lucide="package-check" class="w-5 h-5"></i>
+                            <div class="flex gap-4">
+                                <div class="w-2 h-2 mt-2 rounded-full bg-amber-500 shrink-0"></div>
+                                <div>
+                                    <strong class="block text-slate-900 mb-1">End-to-End Solution</strong>
+                                    <span class="text-sm">Dari konsep desain, produksi, hardbox packaging, hingga pengiriman.</span>
+                                </div>
                             </div>
-                            <h3 class="font-bold text-slate-900 mb-2">Tepat Waktu</h3>
-                            <p class="text-sm text-slate-600">Komitmen deadline adalah prioritas kami dalam setiap project pengadaan.</p>
+                            <div class="flex gap-4">
+                                <div class="w-2 h-2 mt-2 rounded-full bg-amber-500 shrink-0"></div>
+                                <div>
+                                    <strong class="block text-slate-900 mb-1">Quality Control Berlapis</strong>
+                                    <span class="text-sm">Memastikan tidak ada logo miring atau barang cacat.</span>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="w-2 h-2 mt-2 rounded-full bg-amber-500 shrink-0"></div>
+                                <div>
+                                    <strong class="block text-slate-900 mb-1">Corporate Integrity</strong>
+                                    <span class="text-sm">Transparansi harga dan ketepatan waktu adalah prioritas kami.</span>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                    </section>
+
+                    <section class="border-l-4 border-amber-500 pl-6 py-2 italic text-slate-600 bg-amber-50/50 rounded-r-lg">
+                        "Saya membangun BIKASPRO dengan visi untuk menaikkan standar industri souvenir di Indonesia. Fokus kami bukan hanya menjual produk, tapi memberikan peace of mind (rasa tenang) bagi Anda saat mempersiapkan event penting perusahaan."
+                        <div class="mt-4 font-bold text-slate-900 not-italic">— Founder BIKASPRO</div>
+                    </section>
                 </div>
             </div>
         </div>
@@ -470,7 +537,7 @@
             items.forEach(item => {
                 html += `
                 <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all group border border-slate-100 flex flex-col">
-                    <div class="h-48 bg-slate-100 relative overflow-hidden flex items-center justify-center">
+                    <div class="aspect-[4/3] bg-slate-100 relative overflow-hidden flex items-center justify-center">
                         <!-- Image Element: Looks in 'images' folder -->
                         <img src="./images/${item.img}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
                         
