@@ -470,16 +470,17 @@
             { id: 'packages', name: 'Paket & Hampers' },
             { id: 'drinkware', name: 'Tumbler & Drinkware' },
             { id: 'apparel', name: 'Seragam & Apparel' },
+            { id: 'lifestyle', name: 'Lifestyle & Accessories' }, // NEW CATEGORY
             { id: 'printing', name: 'Digital & Offset Print' },
             { id: 'advertising', name: 'Signage & Advertising' },
             { id: 'booth', name: 'Booth & Event Desk' },
-            { id: 'packaging', name: 'Packaging & Box' },
+            { id: 'packaging', name: 'Bags & Packaging' }, // Renamed slightly
             { id: 'stationary', name: 'Stationery & Notebook' },
             { id: 'tech', name: 'Gadget & Tech' },
             { id: 'lanyard', name: 'Lanyard & ID Card' },
         ];
 
-        // --- DAFTAR GAMBAR PRODUK (TOTAL 46 ITEMS) ---
+        // --- DAFTAR GAMBAR PRODUK (TOTAL 52 ITEMS) ---
         const PRODUCTS = [
             // Paket
             { category: 'packages', name: 'Basic Seminar Kit A', desc: 'Tote Bag Spunbond + Blocknote + Pulpen', icon: 'package', img: 'package_seminar_basic.jpg' },
@@ -512,7 +513,7 @@
             { category: 'booth', name: 'Event Desk Portable', desc: 'Meja Promosi PVC Bongkar Pasang', icon: 'store', img: 'product_event_desk.jpg' },
             { category: 'booth', name: 'Backwall Portable', desc: 'Spider System (Lurus/Lengkung) + Trolley', icon: 'presentation', img: 'product_backwall_display.jpg' },
             { category: 'booth', name: 'Pop-Up Counter Table', desc: 'Meja Pameran Premium, Sistem Magnet', icon: 'store', img: 'product_popup_table.jpg' },
-            // Packaging
+            // Packaging & Bags
             { category: 'packaging', name: 'Hardbox Custom Magnet', desc: 'Board No. 30, Full Color Cover', icon: 'box', img: 'product_hardbox_gift.jpg' },
             { category: 'packaging', name: 'Paper Bag Premium', desc: 'Bahan Art Carton 260gr, Laminasi', icon: 'shopping-bag', img: 'product_paperbag.jpg' },
             { category: 'packaging', name: 'Corrugated Box Mailer', desc: 'Dus E-Flute Die Cut, Sablon Logo', icon: 'package', img: 'product_corrugated_box.jpg' },
@@ -520,6 +521,11 @@
             { category: 'packaging', name: 'Tote Bag Spunbond', desc: 'Press / Jahit, Sablon 1 Warna', icon: 'shopping-bag', img: 'product_totebag_spunbond.jpg' },
             { category: 'packaging', name: 'Tote Bag Blacu', desc: 'Warna Natural, Sablon Full Color', icon: 'shopping-bag', img: 'product_totebag_blacu.jpg' },
             { category: 'packaging', name: 'Tote Bag Kanvas Premium', desc: 'Bahan Tebal, Jahitan Kuat, Resleting', icon: 'shopping-bag', img: 'product_totebag_kanvas.jpg' },
+            { category: 'packaging', name: 'Tas Laptop / Sleeve Case', desc: 'Bahan Neoprene / Kanvas, Busa Tebal', icon: 'briefcase', img: 'product_laptop_bag.jpg' }, // NEW ITEM
+            // Lifestyle (NEW CATEGORY)
+            { category: 'lifestyle', name: 'Payung Lipat 3 / Golf', desc: 'Rangka Kuat Anti Angin, Sablon Logo 4 Sisi', icon: 'umbrella', img: 'product_umbrella.jpg' }, // NEW ITEM
+            { category: 'lifestyle', name: 'Handuk Bordir Custom', desc: 'Cotton Terry Palmer / Merah Putih, Bordir Komputer', icon: 'smile', img: 'product_towel_embroidery.jpg' }, // NEW ITEM
+            { category: 'lifestyle', name: 'Pouch Kosmetik / Travel', desc: 'Bahan Kulit Sintetis / Kanvas, Resleting', icon: 'archive', img: 'product_pouch_custom.jpg' }, // NEW ITEM
             // Stationary
             { category: 'stationary', name: 'Notebook Hardcover A5', desc: 'PU Leather, Deboss Logo, Tali Karet', icon: 'book', img: 'product_notebook_leather.jpg' },
             { category: 'stationary', name: 'Pulpen Metal Executive', desc: 'Laser Engraved Logo, Heavy Weight', icon: 'pen-tool', img: 'product_pen_metal.jpg' },
@@ -531,10 +537,12 @@
             { category: 'apparel', name: 'Coach Jacket Parasut', desc: 'Sablon DTF / Windbreaker', icon: 'shirt', img: 'product_jacket_coach.jpg' },
             { category: 'apparel', name: 'Kemeja PDH / PDL', desc: 'Bahan Drill / Tropical, Bordir Logo', icon: 'shirt', img: 'product_kemeja_kerja.jpg' },
             { category: 'apparel', name: 'Kaos Cotton Combed 30s', desc: 'Sablon Plastisol / DTF, Bahan Adem', icon: 'shirt', img: 'product_tshirt_combed.jpg' },
+            { category: 'apparel', name: 'Topi Baseball / Snapback', desc: 'Bahan Rafael / Drill, Bordir Timbul 3D', icon: 'smile', img: 'product_cap_custom.jpg' }, // NEW ITEM
             // Tech
             { category: 'tech', name: 'Powerbank 10.000mAh', desc: 'Slim Design, UV Print Full Color', icon: 'smartphone', img: 'product_powerbank.jpg' },
             { category: 'tech', name: 'Flashdisk Kartu / Metal', desc: 'Chip Grade A, Garansi 1 Tahun', icon: 'save', img: 'product_flashdisk.jpg' },
             { category: 'tech', name: 'E-Money / Flazz Custom', desc: 'Print UV 1 Sisi / 2 Sisi, Saldo 0', icon: 'credit-card', img: 'product_emoney_custom.jpg' },
+            { category: 'tech', name: 'Jasa 3D Printing', desc: 'Prototyping SLA/FDM, Bahan PLA+/Resin', icon: 'box', img: 'product_3d_print.jpg' }, // NEW ITEM
             // Lanyard
             { category: 'lanyard', name: 'Lanyard Tisu 2cm', desc: 'Full Color Sublimation + Stopper', icon: 'tag', img: 'product_lanyard_detail.jpg' },
         ];
