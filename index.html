@@ -114,8 +114,8 @@
                         </div>
                     </div>
                     
-                    <!-- Hero Image (Responsive Height) -->
-                    <div class="relative hidden md:block group">
+                    <!-- Hero Image (Responsive Height & Visibility Fixed) -->
+                    <div class="relative block group mt-8 md:mt-0"> <!-- Changed from 'hidden md:block' to 'block' and added margin for mobile -->
                         <div class="relative z-10 rounded-2xl overflow-hidden shadow-2xl border-4 border-slate-700/50 h-[300px] md:h-[450px] bg-slate-800 flex items-center justify-center">
                              <img src="./images/hero_banner.jpg" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
                              <div class="hidden flex-col items-center text-slate-600 absolute inset-0 justify-center bg-slate-800">
@@ -226,7 +226,8 @@
                         Jelajahi pilihan produk merchandise dan solusi cetak berkualitas kami. Semua item dapat di-custom dengan logo perusahaan Anda.
                     </p>
                 </div>
-                <div class="flex flex-wrap justify-center gap-2 mb-12 sticky top-24 z-30 bg-slate-50/90 backdrop-blur py-2" id="category-filters">
+                <!-- REMOVED: sticky top-24 z-30 bg-slate-50/90 backdrop-blur py-2 -->
+                <div class="flex flex-wrap justify-center gap-2 mb-12" id="category-filters">
                     <!-- JS Will Populate This -->
                 </div>
                 <!-- Catalog Grid -->
@@ -598,7 +599,7 @@
                         <div class="p-5 flex-1 flex flex-col">
                             <div class="text-[10px] font-bold text-amber-600 mb-1 uppercase tracking-wider">${item.category === 'packages' ? 'PAKET' : item.category}</div>
                             <h3 class="font-bold text-slate-900 mb-2 leading-snug text-lg">${item.name}</h3>
-                            <p class="text-xs text-slate-500 mb-4 line-clamp-2">${item.desc}</p>
+                            <p class="text-xs text-slate-500 mb-4">${item.desc}</p>
                             <a href="https://wa.me/6281234567890?text=Tanya%20harga%20${item.name}" target="_blank" class="mt-auto block w-full text-center py-2 text-sm font-bold border border-slate-200 rounded-lg text-slate-600 hover:border-amber-500 hover:text-amber-600 hover:bg-amber-50 transition-colors">
                                 Minta Harga
                             </a>
