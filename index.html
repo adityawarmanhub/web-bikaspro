@@ -39,7 +39,7 @@
         }
     </script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
         
         body { font-family: 'Inter', sans-serif; }
         
@@ -60,10 +60,17 @@
     <!-- NAVIGATION -->
     <nav class="fixed w-full z-50 bg-slate-900 text-white shadow-lg transition-all duration-300" id="navbar">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <!-- Logo -->
-            <div onclick="switchPage('home')" class="cursor-pointer flex items-center gap-2 font-bold text-2xl tracking-tighter hover:opacity-90 transition">
-                <div class="w-8 h-8 bg-amber-500 rounded flex items-center justify-center text-slate-900 font-bold">B</div>
-                BIKASPRO
+            <!-- Logo (BRAND STRATEGY: FINGERPRINT MIX) -->
+            <div onclick="switchPage('home')" class="cursor-pointer flex items-center gap-3 group select-none">
+                <div class="text-amber-500 group-hover:scale-105 transition-transform duration-300">
+                    <i data-lucide="fingerprint" class="w-10 h-10 stroke-[2]"></i>
+                </div>
+                <div class="flex flex-col justify-center">
+                    <div class="text-2xl text-white font-bold tracking-tight leading-none">
+                        BIKASPRO
+                    </div>
+                    <span class="text-[9px] font-bold text-amber-500 uppercase tracking-[0.3em] mt-1 ml-0.5">Solution</span>
+                </div>
             </div>
 
             <!-- Desktop Menu -->
@@ -182,7 +189,7 @@
                 </div>
             </section>
 
-            <!-- 4. Why Us -->
+            <!-- 4. Why Us (Home) -->
             <section class="py-20 bg-white">
                 <div class="container mx-auto px-6">
                     <div class="text-center max-w-2xl mx-auto mb-16">
@@ -352,6 +359,41 @@
                         </p>
                     </section>
                     
+                    <!-- RESTORED: Why Choose Us (About Page Version) -->
+                    <section class="bg-slate-50 p-8 rounded-2xl border border-slate-100 my-12">
+                        <h2 class="text-2xl font-bold text-slate-900 mb-6" data-i18n="about_feat_title">Mengapa Memilih Kami?</h2>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="flex gap-4">
+                                <div class="w-2 h-2 mt-2 rounded-full bg-amber-500 shrink-0"></div>
+                                <div>
+                                    <strong class="block text-slate-900 mb-1" data-i18n="about_feat_1">Curated Selection</strong>
+                                    <span class="text-sm" data-i18n="about_feat_1_desc">Kami menyeleksi material terbaik agar souvenir Anda layak disimpan.</span>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="w-2 h-2 mt-2 rounded-full bg-amber-500 shrink-0"></div>
+                                <div>
+                                    <strong class="block text-slate-900 mb-1" data-i18n="about_feat_2">End-to-End Solution</strong>
+                                    <span class="text-sm" data-i18n="about_feat_2_desc">Dari konsep desain, produksi, hardbox packaging, hingga pengiriman.</span>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="w-2 h-2 mt-2 rounded-full bg-amber-500 shrink-0"></div>
+                                <div>
+                                    <strong class="block text-slate-900 mb-1" data-i18n="about_feat_3">Quality Control Berlapis</strong>
+                                    <span class="text-sm" data-i18n="about_feat_3_desc">Memastikan tidak ada logo miring atau barang cacat.</span>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="w-2 h-2 mt-2 rounded-full bg-amber-500 shrink-0"></div>
+                                <div>
+                                    <strong class="block text-slate-900 mb-1" data-i18n="about_feat_4">Corporate Integrity</strong>
+                                    <span class="text-sm" data-i18n="about_feat_4_desc">Transparansi harga dan ketepatan waktu adalah prioritas kami.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
                     <section class="border-l-4 border-amber-500 pl-6 py-2 italic text-slate-600 bg-amber-50/50 rounded-r-lg">
                         "<span data-i18n="founder_quote">Saya membangun BIKASPRO dengan visi untuk menaikkan standar industri souvenir di Indonesia. Fokus kami bukan hanya menjual produk, tapi memberikan peace of mind (rasa tenang) bagi Anda saat mempersiapkan event penting perusahaan.</span>"
                         <div class="mt-4 font-bold text-slate-900 not-italic">— Founder BIKASPRO</div>
@@ -394,6 +436,10 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="mt-12 pt-8 border-t border-slate-800">
+                             <div class="text-xs text-slate-500 uppercase tracking-widest mb-2">Jam Operasional</div>
+                             <div class="text-sm text-slate-300">Senin - Jumat: 09.00 - 17.00</div>
+                        </div>
                     </div>
                     
                     <!-- Form -->
@@ -424,14 +470,34 @@
         </div>
     </main>
 
-    <!-- FOOTER -->
+    <!-- FOOTER (RESTORED LINKS) -->
     <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800 mt-auto">
         <div class="container mx-auto px-6 grid md:grid-cols-4 gap-8 mb-8">
             <div class="col-span-1 md:col-span-2">
                 <div class="text-2xl font-bold text-white mb-4">BIKASPRO</div>
                 <p class="max-w-sm text-sm leading-relaxed" data-i18n="footer_desc">Vendor merchandise dan souvenir korporat terpercaya di Jakarta. Membantu brand tampil profesional melalui produk berkualitas.</p>
             </div>
-            <!-- ... Footer links remain simple ... -->
+            
+            <!-- Restored Footer Menu -->
+            <div>
+                <h4 class="text-white font-bold mb-4 uppercase text-xs tracking-wider" data-i18n="footer_menu">Menu</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><button onclick="switchPage('home')" class="hover:text-amber-500 transition-colors" data-i18n="nav_home">Beranda</button></li>
+                    <li><button onclick="switchPage('catalog')" class="hover:text-amber-500 transition-colors" data-i18n="nav_catalog">Katalog Produk</button></li>
+                    <li><button onclick="switchPage('about')" class="hover:text-amber-500 transition-colors" data-i18n="nav_about">Tentang Kami</button></li>
+                    <li><button onclick="switchPage('contact')" class="hover:text-amber-500 transition-colors" data-i18n="nav_contact">Kontak</button></li>
+                </ul>
+            </div>
+
+            <!-- Restored Social Media -->
+            <div>
+                <h4 class="text-white font-bold mb-4 uppercase text-xs tracking-wider" data-i18n="footer_social">Sosial Media</h4>
+                <div class="flex gap-4">
+                    <a href="#" class="w-8 h-8 rounded bg-slate-800 flex items-center justify-center hover:bg-amber-500 hover:text-slate-900 transition"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+                    <a href="#" class="w-8 h-8 rounded bg-slate-800 flex items-center justify-center hover:bg-amber-500 hover:text-slate-900 transition"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+                    <a href="#" class="w-8 h-8 rounded bg-slate-800 flex items-center justify-center hover:bg-amber-500 hover:text-slate-900 transition"><i data-lucide="facebook" class="w-4 h-4"></i></a>
+                </div>
+            </div>
         </div>
         <div class="container mx-auto px-6 pt-8 border-t border-slate-800 text-center text-sm text-slate-600">
             &copy; 2025 BintangKasa Produksi. All Rights Reserved.
@@ -497,6 +563,17 @@
                 story_p1: "BIKASPRO (BintangKasa Produksi) lahir dari satu pemahaman sederhana: Dalam dunia bisnis, merchandise bukan sekadar barang—itu adalah representasi citra perusahaan Anda.",
                 story_p2: "Kami memahami tantangan yang dihadapi tim Procurement dan HR: deadline yang ketat, vendor yang sulit dihubungi, dan kualitas barang yang tidak konsisten. BIKASPRO hadir untuk memutus rantai masalah tersebut.",
                 founder_quote: "Saya membangun BIKASPRO dengan visi untuk menaikkan standar industri souvenir di Indonesia. Fokus kami bukan hanya menjual produk, tapi memberikan peace of mind (rasa tenang) bagi Anda saat mempersiapkan event penting perusahaan.",
+                // NEW: About Us Features Translations
+                about_feat_title: "Mengapa Memilih Kami?",
+                about_feat_1: "Curated Selection",
+                about_feat_1_desc: "Kami menyeleksi material terbaik agar souvenir Anda layak disimpan.",
+                about_feat_2: "End-to-End Solution",
+                about_feat_2_desc: "Dari konsep desain, produksi, hardbox packaging, hingga pengiriman.",
+                about_feat_3: "Quality Control Berlapis",
+                about_feat_3_desc: "Memastikan tidak ada logo miring atau barang cacat.",
+                about_feat_4: "Corporate Integrity",
+                about_feat_4_desc: "Transparansi harga dan ketepatan waktu adalah prioritas kami.",
+                // Contact
                 contact_title: "Hubungi Kami",
                 contact_desc: "Siap membuat merchandise yang memukau? Diskusikan kebutuhan Anda sekarang.",
                 addr_title: "Alamat Studio",
@@ -505,7 +582,10 @@
                 form_company: "Perusahaan",
                 form_msg: "Pesan",
                 form_send: "Kirim Permintaan",
+                // Footer
                 footer_desc: "Vendor merchandise dan souvenir korporat terpercaya di Jakarta. Membantu brand tampil profesional melalui produk berkualitas.",
+                footer_menu: "Menu",
+                footer_social: "Sosial Media",
                 chat_float: "Chat Kami",
                 btn_ask_price: "Minta Harga",
                 btn_view_pkg: "Lihat Paket",
@@ -558,6 +638,17 @@
                 story_p1: "BIKASPRO (BintangKasa Produksi) was born from a simple understanding: In the business world, merchandise is not just goods—it's a representation of your company's image.",
                 story_p2: "We understand the challenges faced by Procurement and HR teams: tight deadlines, hard-to-reach vendors, and inconsistent quality. BIKASPRO is here to break that chain of problems.",
                 founder_quote: "I built BIKASPRO with a vision to raise the standard of the souvenir industry in Indonesia. Our focus is not just selling products, but providing peace of mind for you when preparing important company events.",
+                // NEW: About Us Features Translations EN
+                about_feat_title: "Why Choose Us?",
+                about_feat_1: "Curated Selection",
+                about_feat_1_desc: "We select the best materials so your souvenirs are worth keeping.",
+                about_feat_2: "End-to-End Solution",
+                about_feat_2_desc: "From design concept, production, hardbox packaging, to delivery.",
+                about_feat_3: "Layered Quality Control",
+                about_feat_3_desc: "Ensuring no crooked logos or defective items.",
+                about_feat_4: "Corporate Integrity",
+                about_feat_4_desc: "Price transparency and punctuality are our priorities.",
+                // Contact
                 contact_title: "Contact Us",
                 contact_desc: "Ready to create stunning merchandise? Discuss your needs now.",
                 addr_title: "Studio Address",
@@ -566,7 +657,10 @@
                 form_company: "Company",
                 form_msg: "Message",
                 form_send: "Send Request",
+                // Footer
                 footer_desc: "Trusted corporate merchandise and souvenir vendor in Jakarta. Helping brands appear professional through quality products.",
+                footer_menu: "Menu",
+                footer_social: "Social Media",
                 chat_float: "Chat Us",
                 btn_ask_price: "Ask Price",
                 btn_view_pkg: "View Package",
@@ -588,7 +682,7 @@
             { name: "Aqua", logo: "client_aqua.jpg" }
         ];
 
-        // --- DATA PACKAGES (With English Translations) ---
+        // --- DATA PACKAGES ---
         const PACKAGES = [
             { id: 1, tier: "Tier 1: Mass Impact", tier_en: "Tier 1: Mass Impact", name: "Seminar Starter Kit", price: "Budget Hemat", price_en: "Budget Friendly", items: ["Tote Bag Blacu", "Lanyard Tisu", "Block Note A6", "Pulpen Custom"], items_en: ["Calico Tote Bag", "Tissue Lanyard", "A6 Block Note", "Custom Pen"], color: "bg-blue-50", border: "border-blue-100" },
             { id: 2, tier: "Tier 2: Professional", tier_en: "Tier 2: Professional", name: "New Employee Kit", price: "Best Seller", price_en: "Best Seller", items: ["Hardbox Corrugated", "Tumbler Vacuum", "Agenda Leather", "Kaos Cotton 30s"], items_en: ["Corrugated Hardbox", "Vacuum Tumbler", "Leather Agenda", "Cotton Shirt 30s"], color: "bg-slate-50", border: "border-slate-200" },
@@ -610,7 +704,7 @@
             { id: 'lanyard', name: 'Lanyard & ID Card', name_en: 'Lanyard & ID' },
         ];
 
-        // --- DAFTAR PRODUK (With English Desc) ---
+        // --- DAFTAR GAMBAR PRODUK ---
         const PRODUCTS = [
             // Paket
             { category: 'packages', name: 'Basic Seminar Kit A', desc: 'Tote Bag Spunbond + Blocknote + Pulpen', desc_en: 'Spunbond Tote Bag + Blocknote + Pen', img: 'package_seminar_basic.jpg' },
@@ -677,6 +771,8 @@
             { category: 'lanyard', name: 'Lanyard Tisu 2cm', desc: 'Full Color Sublimation + Stopper', desc_en: 'Full Color Sublimation + Stopper', img: 'product_lanyard_detail.jpg' },
         ];
 
+        // --- FUNCTIONS ---
+
         // --- LANGUAGE LOGIC ---
         function toggleLanguage() {
             setLanguage(currentLang === 'id' ? 'en' : 'id');
@@ -684,20 +780,13 @@
 
         function setLanguage(lang) {
             currentLang = lang;
-            document.getElementById('lang-display').textContent = lang.toUpperCase();
+            const langDisplay = document.getElementById('lang-display');
+            if(langDisplay) langDisplay.textContent = lang.toUpperCase();
             
             // 1. Update Static Text (Data-i18n)
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
                 if (TRANSLATIONS[lang][key]) {
-                    // Check if element has child nodes (like icons) we want to preserve?
-                    // Simple approach: Use innerHTML to allow <strong> tags in translations
-                    // But we must be careful not to wipe out icons if they are INSIDE the translatable area.
-                    // For buttons with icons, the structure is: <span>Text</span> <icon>.
-                    // So we should ideally target the SPAN inside if possible, OR just replace HTML content if the key includes the icon logic.
-                    // My previous HTML for buttons: <span data-i18n="btn">Text</span> <icon>. This is safer.
-                    // Let's check my HTML... Ah, for Hero button I did: <span data-i18n="btn_catalog">Lihat Katalog</span> <i...>
-                    // Perfect.
                     el.innerHTML = TRANSLATIONS[lang][key];
                 }
             });
@@ -705,13 +794,12 @@
             // 2. Re-render Dynamic Content
             renderPackages();
             renderFilters();
+            
             // Re-render catalog with active filter preserved
             const activeBtn = document.querySelector('.filter-btn.active');
             const activeCat = activeBtn ? activeBtn.getAttribute('data-cat') : 'all';
             filterCatalog(activeCat);
         }
-
-        // --- RENDER FUNCTIONS (UPDATED FOR LANG) ---
 
         // NEW: Render Client Logos with Fallback
         function renderClients() {
@@ -726,6 +814,7 @@
                         class="max-h-full max-w-full object-contain"
                         onerror="this.style.display='none'; this.nextElementSibling.style.display='block'"
                     >
+                    <!-- Fallback Text if Logo missing -->
                     <span class="hidden text-xl font-bold font-sans text-slate-400 group-hover:text-slate-800 transition-colors cursor-default select-none">${client.name}</span>
                 </div>
                 `;
@@ -792,7 +881,7 @@
         }
 
         function filterCatalog(category) {
-            // Update UI State
+            // Update Buttons
             document.querySelectorAll('.filter-btn').forEach(btn => {
                 if(btn.dataset.cat === category) {
                     btn.className = "filter-btn active px-5 py-2 rounded-full text-xs font-bold border transition-all bg-slate-900 text-white border-slate-900";
@@ -801,7 +890,10 @@
                 }
             });
 
+            // Filter Data
             const items = category === 'all' ? PRODUCTS : PRODUCTS.filter(p => p.category === category);
+            
+            // Render Grid
             const container = document.getElementById('catalog-grid');
             let html = '';
             
@@ -823,7 +915,10 @@
                     html += `
                     <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all group border border-slate-100 flex flex-col relative">
                         <div class="aspect-[4/3] bg-slate-100 relative overflow-hidden flex items-center justify-center">
+                            <!-- Image Element: Looks in 'images' folder -->
                             <img src="./images/${item.img}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                            
+                            <!-- Fallback Icon (Hidden if image loads) -->
                             <div class="hidden flex-col items-center text-slate-400 group-hover:scale-110 transition-transform duration-500 absolute inset-0 justify-center bg-slate-100">
                                 <i data-lucide="${item.icon || 'box'}" class="w-12 h-12 mb-2 opacity-60"></i>
                                 <span class="text-[10px] uppercase tracking-widest font-bold opacity-40">Preview</span>
