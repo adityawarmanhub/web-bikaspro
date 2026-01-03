@@ -24,6 +24,15 @@
                 extend: {
                     colors: {
                         slate: { 850: '#151e2e' } // Custom dark
+                    },
+                    animation: {
+                        'scroll': 'scroll 40s linear infinite',
+                    },
+                    keyframes: {
+                        scroll: {
+                            '0%': { transform: 'translateX(0)' },
+                            '100%': { transform: 'translateX(-100%)' },
+                        }
                     }
                 }
             }
@@ -115,7 +124,7 @@
                     </div>
                     
                     <!-- Hero Image (Responsive Height & Visibility Fixed) -->
-                    <div class="relative block group mt-8 md:mt-0"> <!-- Changed from 'hidden md:block' to 'block' and added margin for mobile -->
+                    <div class="relative block group mt-8 md:mt-0"> 
                         <div class="relative z-10 rounded-2xl overflow-hidden shadow-2xl border-4 border-slate-700/50 h-[300px] md:h-[450px] bg-slate-800 flex items-center justify-center">
                              <img src="./images/hero_banner.jpg" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
                              <div class="hidden flex-col items-center text-slate-600 absolute inset-0 justify-center bg-slate-800">
@@ -148,8 +157,22 @@
                 </div>
             </section>
 
-            <!-- 3. Why Us -->
-            <section class="py-20 bg-slate-50">
+            <!-- 3. CLIENT LIST (UPDATED: White Background for JPG blending) -->
+            <section class="py-12 bg-white border-b border-slate-200 overflow-hidden"> <!-- Changed bg-slate-50 to bg-white -->
+                <div class="container mx-auto px-6 text-center mb-10">
+                    <p class="text-sm font-bold text-slate-500 uppercase tracking-widest">Dipercaya oleh Perusahaan & Startup Terkemuka</p>
+                </div>
+                
+                <!-- Client Grid Layout -->
+                <div class="container mx-auto px-6">
+                    <div class="flex flex-wrap justify-center items-center gap-x-12 gap-y-8" id="client-list">
+                        <!-- JS Will Populate Client Logos Here -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. Why Us -->
+            <section class="py-20 bg-white">
                 <div class="container mx-auto px-6">
                     <div class="text-center max-w-2xl mx-auto mb-16">
                         <h2 class="text-3xl font-bold text-slate-900 mb-4">Kenapa Memilih <span class="text-amber-600">BIKASPRO?</span></h2>
@@ -159,22 +182,22 @@
                     </div>
                     
                     <div class="grid md:grid-cols-3 gap-8">
-                        <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-slate-100">
-                            <div class="mb-6 bg-slate-50 w-16 h-16 rounded-full flex items-center justify-center">
+                        <div class="bg-slate-50 p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-slate-100">
+                            <div class="mb-6 bg-white w-16 h-16 rounded-full flex items-center justify-center">
                                 <i data-lucide="briefcase" class="w-8 h-8 text-blue-600"></i>
                             </div>
                             <h3 class="text-xl font-bold text-slate-900 mb-3">Kurasi Profesional</h3>
                             <p class="text-slate-600 leading-relaxed">Kami tidak menjual barang murahan. Semua produk dikurasi agar layak merepresentasikan brand Anda.</p>
                         </div>
-                        <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-slate-100">
-                            <div class="mb-6 bg-slate-50 w-16 h-16 rounded-full flex items-center justify-center">
+                        <div class="bg-slate-50 p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-slate-100">
+                            <div class="mb-6 bg-white w-16 h-16 rounded-full flex items-center justify-center">
                                 <i data-lucide="printer" class="w-8 h-8 text-green-600"></i>
                             </div>
                             <h3 class="text-xl font-bold text-slate-900 mb-3">Production Quality</h3>
                             <p class="text-slate-600 leading-relaxed">Sistem QC berlapis untuk hasil cetak presisi. Warna akurat, potongan rapi, dan material sesuai spesifikasi.</p>
                         </div>
-                        <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-slate-100">
-                            <div class="mb-6 bg-slate-50 w-16 h-16 rounded-full flex items-center justify-center">
+                        <div class="bg-slate-50 p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-slate-100">
+                            <div class="mb-6 bg-white w-16 h-16 rounded-full flex items-center justify-center">
                                 <i data-lucide="box" class="w-8 h-8 text-amber-600"></i>
                             </div>
                             <h3 class="text-xl font-bold text-slate-900 mb-3">Solusi All-in-One</h3>
@@ -184,8 +207,8 @@
                 </div>
             </section>
 
-            <!-- 4. Packages (UPDATED LOGIC) -->
-            <section class="py-20 bg-white">
+            <!-- 5. Packages -->
+            <section class="py-20 bg-slate-50">
                 <div class="container mx-auto px-6">
                     <div class="flex flex-col md:flex-row justify-between items-end mb-12">
                         <div>
@@ -202,7 +225,7 @@
                 </div>
             </section>
 
-            <!-- 5. CTA Banner -->
+            <!-- 6. CTA Banner -->
             <section class="bg-slate-900 py-20">
                 <div class="container mx-auto px-6 text-center">
                     <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Butuh Konsultasi Gratis?</h2>
@@ -226,8 +249,7 @@
                         Jelajahi pilihan produk merchandise dan solusi cetak berkualitas kami. Semua item dapat di-custom dengan logo perusahaan Anda.
                     </p>
                 </div>
-                <!-- REMOVED: sticky top-24 z-30 bg-slate-50/90 backdrop-blur py-2 -->
-                <div class="flex flex-wrap justify-center gap-2 mb-12" id="category-filters">
+                <div class="flex flex-wrap justify-center gap-2 mb-12 sticky top-24 z-30 bg-slate-50/90 backdrop-blur py-2" id="category-filters">
                     <!-- JS Will Populate This -->
                 </div>
                 <!-- Catalog Grid -->
@@ -422,16 +444,30 @@
 
     <!-- LOGIC -->
     <script>
-        // --- DATA ---
+        // --- DATA CLIENTS (UPDATED TO .JPG) ---
+        const CLIENTS = [
+            { name: "Traveloka", logo: "client_traveloka.jpg" },
+            { name: "Tripledot", logo: "client_tripledot.jpg" },
+            { name: "Bibit", logo: "client_bibit.jpg" },
+            { name: "Stockbit", logo: "client_stockbit.jpg" },
+            { name: "Ninja Van", logo: "client_ninjavan.jpg" },
+            { name: "Kidzania", logo: "client_kidzania.jpg" },
+            { name: "Touchten Games", logo: "client_touchten.jpg" },
+            { name: "JnT", logo: "client_jnt.jpg" },
+            { name: "Diri Care", logo: "client_diricare.jpg" },
+            { name: "Aqua", logo: "client_aqua.jpg" }
+        ];
+
+        // --- DATA PACKAGES ---
         const PACKAGES = [
             { id: 1, tier: "Tier 1: Mass Impact", name: "Seminar Starter Kit", price: "Budget Hemat", items: ["Tote Bag Blacu", "Lanyard Tisu", "Block Note A6", "Pulpen Custom"], color: "bg-blue-50", border: "border-blue-100" },
             { id: 2, tier: "Tier 2: Professional", name: "New Employee Kit", price: "Best Seller", items: ["Hardbox Corrugated", "Tumbler Vacuum", "Agenda Leather", "Kaos Cotton 30s"], color: "bg-slate-50", border: "border-slate-200" },
             { id: 3, tier: "Tier 3: Executive", name: "VIP Signature Hampers", price: "Premium", items: ["Rigid Hardbox Magnet", "Tumbler Japan Style", "E-Money UV Print", "Powerbank 10k mAh"], color: "bg-amber-50", border: "border-amber-100" }
         ];
 
-        // Daftar Kategori (Full + Added 'packages' for filtering)
+        // Daftar Kategori
         const CATEGORIES = [
-            { id: 'packages', name: 'Paket & Hampers' }, // Kategori Baru
+            { id: 'packages', name: 'Paket & Hampers' },
             { id: 'drinkware', name: 'Tumbler & Drinkware' },
             { id: 'apparel', name: 'Seragam & Apparel' },
             { id: 'printing', name: 'Digital & Offset Print' },
@@ -443,79 +479,88 @@
             { id: 'lanyard', name: 'Lanyard & ID Card' },
         ];
 
-        // --- DAFTAR GAMBAR YANG HARUS DISIAPKAN (Updated with New Package Items) ---
+        // --- DAFTAR GAMBAR PRODUK (TOTAL 46 ITEMS) ---
         const PRODUCTS = [
-            // --- NEW: PAKET & HAMPERS (More than 3 options) ---
+            // Paket
             { category: 'packages', name: 'Basic Seminar Kit A', desc: 'Tote Bag Spunbond + Blocknote + Pulpen', icon: 'package', img: 'package_seminar_basic.jpg' },
             { category: 'packages', name: 'Standard Seminar Kit B', desc: 'Tote Bag Kanvas + Tumbler Plastik + Note', icon: 'package', img: 'package_seminar_standard.jpg' },
             { category: 'packages', name: 'Onboarding Kit Lite', desc: 'Box Corrugated + Mug + Kaos Polos', icon: 'gift', img: 'package_onboarding_lite.jpg' },
             { category: 'packages', name: 'New Employee Pro', desc: 'Hardbox + Tumbler Niagara + Polo Shirt', icon: 'briefcase', img: 'package_onboarding_pro.jpg' },
             { category: 'packages', name: 'VIP Gift Set Gold', desc: 'Hardbox Magnet + Powerbank + E-Money', icon: 'award', img: 'package_vip_gold.jpg' },
             { category: 'packages', name: 'Executive Hampers', desc: 'Leather Agenda + Metal Pen + Tumbler Suhu', icon: 'star', img: 'package_executive.jpg' },
-
             // Drinkware
             { category: 'drinkware', name: 'Tumbler Niagara 500ml', desc: 'Stainless Steel SUS 304, Tahan 12 Jam', icon: 'coffee', img: 'product_tumbler_niagara.jpg' },
             { category: 'drinkware', name: 'Mug Keramik Custom', desc: 'Decal Print High Quality', icon: 'coffee', img: 'product_mug_custom.jpg' },
             { category: 'drinkware', name: 'Tumbler Sakura LED', desc: 'Indikator Suhu Digital, Rubber Paint', icon: 'coffee', img: 'product_tumbler_sakura.jpg' },
-            { category: 'drinkware', name: 'Tumbler Plastik Insert Paper', desc: 'Bahan Plastik, Bisa Insert Kertas Full Color', icon: 'coffee', img: 'product_tumbler_plastic.jpg' }, // NEW
-            { category: 'drinkware', name: 'Tumbler Japan Style', desc: 'Stainless Steel, Tutup Kancing / Clip', icon: 'coffee', img: 'product_tumbler_japan.jpg' }, // NEW
-
-            
+            { category: 'drinkware', name: 'Tumbler Plastik Insert Paper', desc: 'Bahan Plastik, Bisa Insert Kertas Full Color', icon: 'coffee', img: 'product_tumbler_plastic.jpg' },
+            { category: 'drinkware', name: 'Tumbler Japan Style', desc: 'Stainless Steel, Tutup Kancing / Clip', icon: 'coffee', img: 'product_tumbler_japan.jpg' },
             // Printing
             { category: 'printing', name: 'Kartu Nama Eksekutif', desc: 'Fancy Paper + Laminasi Doff', icon: 'credit-card', img: 'product_business_card.jpg' },
             { category: 'printing', name: 'Roll Up Banner 60x160', desc: 'Rangka Alumunium, Bahan Albatros', icon: 'image', img: 'product_rollup_banner.jpg' },
-            { category: 'printing', name: 'Stiker Label Die-Cut', desc: 'Vinyl / Chromo, Kiss Cut Sheet A3', icon: 'sticker', img: 'product_sticker_diecut.jpg' }, // RESTORED
-            { category: 'printing', name: 'Company Profile Book', desc: 'Jilid Spiral / Perfect Binding, Full Color', icon: 'book-open', img: 'product_company_profile.jpg' }, // RESTORED
-            { category: 'printing', name: 'ID Card PVC', desc: 'Bahan PVC Tebal (Seperti ATM), Print 2 Sisi', icon: 'credit-card', img: 'product_id_card.jpg' }, // RESTORED
+            { category: 'printing', name: 'Stiker Label Die-Cut', desc: 'Vinyl / Chromo, Kiss Cut Sheet A3', icon: 'sticker', img: 'product_sticker_diecut.jpg' },
+            { category: 'printing', name: 'Company Profile Book', desc: 'Jilid Spiral / Perfect Binding, Full Color', icon: 'book-open', img: 'product_company_profile.jpg' },
+            { category: 'printing', name: 'ID Card PVC', desc: 'Bahan PVC Tebal (Seperti ATM), Print 2 Sisi', icon: 'credit-card', img: 'product_id_card.jpg' },
             { category: 'printing', name: 'Sticker Label Botol / Kosmetik', desc: 'Vinyl Transparan / Gold / Silver, Anti Air & Minyak', icon: 'sticker', img: 'product_sticker_label_bottle.jpg' },
-
             // Advertising
             { category: 'advertising', name: 'Neon Box Acrylic', desc: 'LED Luminous, Cutting Sticker', icon: 'megaphone', img: 'product_neon_box.jpg' },
             { category: 'advertising', name: 'Huruf Timbul 3D', desc: 'Stainless / Acrylic Backlight', icon: 'type', img: 'product_3d_lettering.jpg' },
             { category: 'advertising', name: 'Car Branding / Wrapping', desc: 'Stiker Mobil Operasional Full Body', icon: 'car', img: 'product_car_branding.jpg' },
-            { category: 'advertising', name: 'Sticker Sandblast Kaca', desc: 'Branding Privasi Ruang Kaca / One Way Vision', icon: 'layers', img: 'product_sticker_sandblast.jpg' }, // NEW
-            { category: 'advertising', name: 'Running Text LED', desc: 'Display Tulisan Berjalan WiFi (Indoor/Outdoor)', icon: 'tv', img: 'product_running_text.jpg' }, // NEW
-            { category: 'advertising', name: 'Tripod Banner Stand', desc: 'Display Poster 2 Sisi, Kokoh (Pengganti X-Banner)', icon: 'presentation', img: 'product_tripod_banner.jpg' }, // NEW
-
+            { category: 'advertising', name: 'Sticker Sandblast Kaca', desc: 'Branding Privasi Ruang Kaca / One Way Vision', icon: 'layers', img: 'product_sticker_sandblast.jpg' },
+            { category: 'advertising', name: 'Running Text LED', desc: 'Display Tulisan Berjalan WiFi (Indoor/Outdoor)', icon: 'tv', img: 'product_running_text.jpg' },
+            { category: 'advertising', name: 'Tripod Banner Stand', desc: 'Display Poster 2 Sisi, Kokoh', icon: 'presentation', img: 'product_tripod_banner.jpg' },
             // Booth
             { category: 'booth', name: 'Event Desk Portable', desc: 'Meja Promosi PVC Bongkar Pasang', icon: 'store', img: 'product_event_desk.jpg' },
             { category: 'booth', name: 'Backwall Portable', desc: 'Spider System (Lurus/Lengkung) + Trolley', icon: 'presentation', img: 'product_backwall_display.jpg' },
             { category: 'booth', name: 'Pop-Up Counter Table', desc: 'Meja Pameran Premium, Sistem Magnet', icon: 'store', img: 'product_popup_table.jpg' },
-
-            // Packaging (Also includes Bags now)
+            // Packaging
             { category: 'packaging', name: 'Hardbox Custom Magnet', desc: 'Board No. 30, Full Color Cover', icon: 'box', img: 'product_hardbox_gift.jpg' },
             { category: 'packaging', name: 'Paper Bag Premium', desc: 'Bahan Art Carton 260gr, Laminasi', icon: 'shopping-bag', img: 'product_paperbag.jpg' },
             { category: 'packaging', name: 'Corrugated Box Mailer', desc: 'Dus E-Flute Die Cut, Sablon Logo', icon: 'package', img: 'product_corrugated_box.jpg' },
             { category: 'packaging', name: 'Bubble Mailer Poly', desc: 'Amplop Plastik Bubble Waterproof + Sablon', icon: 'mail', img: 'product_bubble_mailer.jpg' },
-            { category: 'packaging', name: 'Tote Bag Spunbond', desc: 'Press / Jahit, Sablon 1 Warna', icon: 'shopping-bag', img: 'product_totebag_spunbond.jpg' }, // NEW
-            { category: 'packaging', name: 'Tote Bag Blacu', desc: 'Warna Natural, Sablon Full Color', icon: 'shopping-bag', img: 'product_totebag_blacu.jpg' }, // NEW
-            { category: 'packaging', name: 'Tote Bag Kanvas Premium', desc: 'Bahan Tebal, Jahitan Kuat, Resleting', icon: 'shopping-bag', img: 'product_totebag_kanvas.jpg' }, // NEW
-
+            { category: 'packaging', name: 'Tote Bag Spunbond', desc: 'Press / Jahit, Sablon 1 Warna', icon: 'shopping-bag', img: 'product_totebag_spunbond.jpg' },
+            { category: 'packaging', name: 'Tote Bag Blacu', desc: 'Warna Natural, Sablon Full Color', icon: 'shopping-bag', img: 'product_totebag_blacu.jpg' },
+            { category: 'packaging', name: 'Tote Bag Kanvas Premium', desc: 'Bahan Tebal, Jahitan Kuat, Resleting', icon: 'shopping-bag', img: 'product_totebag_kanvas.jpg' },
             // Stationary
             { category: 'stationary', name: 'Notebook Hardcover A5', desc: 'PU Leather, Deboss Logo, Tali Karet', icon: 'book', img: 'product_notebook_leather.jpg' },
             { category: 'stationary', name: 'Pulpen Metal Executive', desc: 'Laser Engraved Logo, Heavy Weight', icon: 'pen-tool', img: 'product_pen_metal.jpg' },
-            { category: 'stationary', name: 'Agenda Kerja Tahunan', desc: 'Isi Custom HVS 80gr, Pita Pembatas', icon: 'calendar', img: 'product_agenda_custom.jpg' }, 
-            { category: 'stationary', name: 'Block Note Seminar A6', desc: 'Jilid Lem Atas, Isi 50 Lembar HVS', icon: 'sticky-note', img: 'product_blocknote_a6.jpg' }, // NEW
-            { category: 'stationary', name: 'Pulpen Plastik Promosi', desc: 'Sablon Logo, Tali Tisu / Model Cetekan', icon: 'pen-tool', img: 'product_pen_plastic.jpg' }, // NEW
-
+            { category: 'stationary', name: 'Agenda Kerja Tahunan', desc: 'Isi Custom HVS 80gr, Pita Pembatas', icon: 'calendar', img: 'product_agenda_custom.jpg' },
+            { category: 'stationary', name: 'Block Note Seminar A6', desc: 'Jilid Lem Atas, Isi 50 Lembar HVS', icon: 'sticky-note', img: 'product_blocknote_a6.jpg' },
+            { category: 'stationary', name: 'Pulpen Plastik Promosi', desc: 'Sablon Logo, Tali Tisu / Model Cetekan', icon: 'pen-tool', img: 'product_pen_plastic.jpg' },
             // Apparel
             { category: 'apparel', name: 'Polo Shirt Lacoste', desc: 'Bordir Komputer Presisi', icon: 'shirt', img: 'product_polo_shirt.jpg' },
             { category: 'apparel', name: 'Coach Jacket Parasut', desc: 'Sablon DTF / Windbreaker', icon: 'shirt', img: 'product_jacket_coach.jpg' },
-            { category: 'apparel', name: 'Kemeja PDH / PDL', desc: 'Bahan Drill / Tropical, Bordir Logo', icon: 'shirt', img: 'product_kemeja_kerja.jpg' }, 
-            { category: 'apparel', name: 'Kaos Cotton Combed 30s', desc: 'Sablon Plastisol / DTF, Bahan Adem', icon: 'shirt', img: 'product_tshirt_combed.jpg' }, // NEW
-
-            
+            { category: 'apparel', name: 'Kemeja PDH / PDL', desc: 'Bahan Drill / Tropical, Bordir Logo', icon: 'shirt', img: 'product_kemeja_kerja.jpg' },
+            { category: 'apparel', name: 'Kaos Cotton Combed 30s', desc: 'Sablon Plastisol / DTF, Bahan Adem', icon: 'shirt', img: 'product_tshirt_combed.jpg' },
             // Tech
             { category: 'tech', name: 'Powerbank 10.000mAh', desc: 'Slim Design, UV Print Full Color', icon: 'smartphone', img: 'product_powerbank.jpg' },
-            { category: 'tech', name: 'Flashdisk Kartu / Metal', desc: 'Chip Grade A, Garansi 1 Tahun', icon: 'save', img: 'product_flashdisk.jpg' }, 
-            { category: 'tech', name: 'E-Money / Flazz Custom', desc: 'Print UV 1 Sisi / 2 Sisi, Saldo 0', icon: 'credit-card', img: 'product_emoney_custom.jpg' }, // NEW
-
-            
+            { category: 'tech', name: 'Flashdisk Kartu / Metal', desc: 'Chip Grade A, Garansi 1 Tahun', icon: 'save', img: 'product_flashdisk.jpg' },
+            { category: 'tech', name: 'E-Money / Flazz Custom', desc: 'Print UV 1 Sisi / 2 Sisi, Saldo 0', icon: 'credit-card', img: 'product_emoney_custom.jpg' },
             // Lanyard
             { category: 'lanyard', name: 'Lanyard Tisu 2cm', desc: 'Full Color Sublimation + Stopper', icon: 'tag', img: 'product_lanyard_detail.jpg' },
         ];
 
         // --- FUNCTIONS ---
+
+        // NEW: Render Client Logos with Fallback
+        function renderClients() {
+            const container = document.getElementById('client-list');
+            let html = '';
+            CLIENTS.forEach(client => {
+                html += `
+                <div class="group relative h-12 w-32 flex items-center justify-center grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300">
+                    <img 
+                        src="./images/${client.logo}" 
+                        alt="${client.name}" 
+                        class="max-h-full max-w-full object-contain"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='block'"
+                    >
+                    <!-- Fallback Text if Logo missing -->
+                    <span class="hidden text-xl font-bold font-sans text-slate-400 group-hover:text-slate-800 transition-colors cursor-default select-none">${client.name}</span>
+                </div>
+                `;
+            });
+            container.innerHTML = html;
+        }
 
         function renderPackages() {
             const container = document.getElementById('packages-grid');
@@ -535,7 +580,6 @@
                         <ul class="space-y-3 mb-8 flex-1">
                             ${pkg.items.map(item => `<li class="flex items-center gap-3 text-sm text-slate-700"><i data-lucide="check-circle" class="w-4 h-4 text-green-500 shrink-0"></i> ${item}</li>`).join('')}
                         </ul>
-                        <!-- MODIFIED BUTTON LOGIC -->
                         <button onclick="goToPackageCatalog()" class="w-full py-3 border-2 border-slate-900 text-slate-900 font-bold rounded-lg text-center hover:bg-slate-900 hover:text-white transition-colors">
                             Lihat Paket
                         </button>
@@ -545,11 +589,9 @@
             container.innerHTML = html;
         }
 
-        // --- NEW FUNCTION: NAVIGATE TO CATALOG FILTERED BY PACKAGES ---
         function goToPackageCatalog() {
             switchPage('catalog');
             filterCatalog('packages');
-            // Scroll to catalog section slightly offset for sticky header
             window.scrollTo({top: 0, behavior: 'smooth'}); 
         }
 
@@ -564,7 +606,6 @@
         }
 
         function filterCatalog(category) {
-            // Update Buttons
             document.querySelectorAll('.filter-btn').forEach(btn => {
                 if(btn.dataset.cat === category) {
                     btn.className = "filter-btn active px-5 py-2 rounded-full text-xs font-bold border transition-all bg-slate-900 text-white border-slate-900";
@@ -573,10 +614,7 @@
                 }
             });
 
-            // Filter Data
             const items = category === 'all' ? PRODUCTS : PRODUCTS.filter(p => p.category === category);
-            
-            // Render Grid
             const container = document.getElementById('catalog-grid');
             let html = '';
             
@@ -587,10 +625,7 @@
                     html += `
                     <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all group border border-slate-100 flex flex-col">
                         <div class="aspect-[4/3] bg-slate-100 relative overflow-hidden flex items-center justify-center">
-                            <!-- Image Element: Looks in 'images' folder -->
                             <img src="./images/${item.img}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                            
-                            <!-- Fallback Icon (Hidden if image loads) -->
                             <div class="hidden flex-col items-center text-slate-400 group-hover:scale-110 transition-transform duration-500 absolute inset-0 justify-center bg-slate-100">
                                 <i data-lucide="${item.icon || 'box'}" class="w-12 h-12 mb-2 opacity-60"></i>
                                 <span class="text-[10px] uppercase tracking-widest font-bold opacity-40">Preview</span>
@@ -611,7 +646,6 @@
             lucide.createIcons();
         }
 
-        // Navigation
         function switchPage(pageId) {
             document.querySelectorAll('.page-section').forEach(el => el.classList.add('hidden'));
             document.getElementById(pageId + '-page').classList.remove('hidden');
@@ -623,10 +657,10 @@
             document.getElementById('mobile-menu').classList.toggle('hidden');
         }
 
-        // Init
         window.addEventListener('DOMContentLoaded', () => {
             lucide.createIcons();
             renderPackages();
+            renderClients(); // Init Clients
             renderFilters();
             filterCatalog('all');
         });
